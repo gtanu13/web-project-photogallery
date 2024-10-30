@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; 
     overflow-x: hidden;
 }
 
@@ -45,47 +45,7 @@ body {
     font-family: sans-serif;
 }
 
-/* Tab navigation styles */
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.tabs input[type="radio"] {
-    display: none;
-}
-
-.tabs label {
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #9580e4;
-    border: 2px solid #040ecd;
-    border-radius: 10px;
-    margin: 0 5px;
-    transition: background-color 0.3s;
-}
-
-.tabs input[type="radio"]:checked + label {
-    background-color: #560347;
-    color: #121212;
-}
-
-/* Hide all galleries initially */
-.tab-content .gallery {
-    display: none;
-}
-
-/* Display specific gallery based on selected tab */
-#tab1:checked ~ .tab-content .nature,
-#tab2:checked ~ .tab-content .cities,
-#tab3:checked ~ .tab-content .misc {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-/* Custom grid structure */
+/* Custom grid structure- here 3 columns */
 .custom-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -110,10 +70,10 @@ body {
     filter: grayscale(100%);
     transition: filter 0.5s ease, transform 0.3s ease;
     border-radius: 10px;
-    backface-visibility: hidden;
+
 }
 
-/* Hover effect */
+/* Hover effect on img here*/
 .grid-item:hover {
     transform: translateZ(30px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -124,16 +84,3 @@ body {
     transform: scale(1.05);
 }
 
-/* Asymmetric item sizes */
-.grid-item.large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.grid-item.wide {
-    grid-column: span 2;
-}
-
-.grid-item.tall {
-    grid-row: span 2;
-}
